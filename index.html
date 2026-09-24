@@ -30,7 +30,6 @@
         >
           <source src="./assets/logo-loop.mp4" type="video/mp4" />
         </video>
-        <span class="brand-name">PC-CARDS</span>
       </a>
 
       <nav class="main-nav" aria-label="Navigation principale">
@@ -94,3 +93,122 @@
       </section>
 
       <section class="catalogue-section" id="catalogue">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalogue</p>
+            <h1>PC</h1>
+          </div>
+          <p id="activeFilter">Tout voir</p>
+        </div>
+
+        <div class="filter-bar" aria-label="Filtres catalogue">
+          <button class="filter-button active" type="button" data-filter="all">Tout voir</button>
+          <button class="filter-button" type="button" data-filter="limited">Limited Edition</button>
+          <button class="filter-button" type="button" data-filter="gamer">PC GAMER</button>
+        </div>
+
+        <div class="product-grid" aria-live="polite">
+          <article class="product-card" data-category="gamer">
+            <span class="product-tag">PC GAMER</span>
+            <h2>Neon RTX Station</h2>
+            <p>RTX 4070 Super, Ryzen 7, 32 Go RAM, SSD 1 To.</p>
+            <div class="product-meta">
+              <span>1440p</span>
+              <span>Wi-Fi 6E</span>
+              <span>RGB</span>
+            </div>
+            <div class="product-footer">
+              <strong>1 699 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="limited">
+            <span class="product-tag">Limited Edition</span>
+            <h2>Carbon Black LE</h2>
+            <p>Boitier numerote, RTX 4080 Super, Intel i7, SSD 2 To.</p>
+            <div class="product-meta">
+              <span>Serie 25</span>
+              <span>Watercooling</span>
+              <span>Silencieux</span>
+            </div>
+            <div class="product-footer">
+              <strong>2 499 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="gamer">
+            <span class="product-tag">PC GAMER</span>
+            <h2>Arena Core</h2>
+            <p>RTX 4060 Ti, Intel i5, 16 Go RAM, SSD 1 To.</p>
+            <div class="product-meta">
+              <span>1080p+</span>
+              <span>Compact</span>
+              <span>Upgrade</span>
+            </div>
+            <div class="product-footer">
+              <strong>1 149 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="limited">
+            <span class="product-tag">Limited Edition</span>
+            <h2>White Storm LE</h2>
+            <p>Setup blanc, RTX 4070 Ti Super, Ryzen 9, SSD 2 To.</p>
+            <div class="product-meta">
+              <span>4K ready</span>
+              <span>Serie 15</span>
+              <span>Creator</span>
+            </div>
+            <div class="product-footer">
+              <strong>2 199 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="gamer">
+            <span class="product-tag">PC GAMER</span>
+            <h2>Stream Deck PC</h2>
+            <p>RTX 4070, Ryzen 7, 32 Go RAM, capture et streaming.</p>
+            <div class="product-meta">
+              <span>Streaming</span>
+              <span>OBS ready</span>
+              <span>2 To</span>
+            </div>
+            <div class="product-footer">
+              <strong>1 849 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="gamer">
+            <span class="product-tag">PC GAMER</span>
+            <h2>Starter Pulse</h2>
+            <p>RTX 4060, Ryzen 5, 16 Go RAM, SSD 1 To.</p>
+            <div class="product-meta">
+              <span>Esport</span>
+              <span>144 Hz</span>
+              <span>Budget</span>
+            </div>
+            <div class="product-footer">
+              <strong>899 EUR</strong>
+              <button type="button" class="add-button">Ajouter</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Une configuration precise ?</h2>
+        </div>
+        <a href="mailto:contact@pc-cards.example">contact@pc-cards.example</a>
+      </section>
+    </main>
+
+    <script src="./script.js?v=3"></script>
+  </body>
+</html>
