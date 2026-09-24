@@ -4,30 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC-CARDS | Boutique PC</title>
-    <meta name="description" content="Boutique PC-CARDS pour PC Gamer et Limited Edition." />
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <meta
+      name="description"
+      content="PC-CARDS, boutique de PC Gamer et de PC Limited Edition."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Crect x='10' y='16' width='44' height='28' rx='2' fill='none' stroke='%23000000' stroke-width='5'/%3E%3Cpath d='M24 52h16M32 44v8' stroke='%23000000' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
 
   <body>
     <header class="site-header">
-      <a class="brand" href="#accueil">
-        <span class="brand-mark">PC</span>
-        <span>PC-CARDS</span>
+      <a class="brand" href="#accueil" aria-label="PC-CARDS accueil">
+        <video
+          class="logo-video"
+          id="logoVideo"
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+          data-loop-end="6"
+        >
+          <source src="./assets/logo-loop.mp4" type="video/mp4" />
+        </video>
+        <span class="brand-name">PC-CARDS</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Navigation principale">
         <a href="#accueil">Accueil</a>
-
         <div class="catalogue-menu">
-          <button class="nav-button" id="catalogueToggle" type="button">
+          <button
+            class="nav-button"
+            id="catalogueToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="cataloguePanel"
+          >
             Catalogue
           </button>
-
           <div class="catalogue-panel" id="cataloguePanel">
-            <button class="pc-toggle" id="pcToggle" type="button">
+            <button
+              class="pc-toggle"
+              id="pcToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="pcOptions"
+            >
               PC
             </button>
-
             <div class="pc-options" id="pcOptions">
               <button type="button" data-filter="all">Tout voir</button>
               <button type="button" data-filter="limited">Limited Edition</button>
@@ -35,42 +62,30 @@
             </div>
           </div>
         </div>
-
-        <a href="#selection">Selection</a>
+        <a href="#catalogue">Selection</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="cart-button" type="button">
+      <button class="cart-button" type="button" aria-label="Panier">
         Panier <span id="cartCount">0</span>
       </button>
     </header>
 
     <main id="accueil">
-      <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
+      <section class="banner" aria-label="Banniere PC-CARDS">
+        <video class="banner-video" autoplay muted loop playsinline preload="auto">
           <source src="./assets/banner.mp4" type="video/mp4" />
         </video>
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-          <p class="eyebrow">Boutique PC</p>
-          <h1>PC-CARDS</h1>
-          <p class="hero-copy">
-            Des configurations PC pretes pour jouer, creer et passer au niveau superieur.
-          </p>
-          <a class="hero-link" href="#catalogue">Voir le catalogue</a>
-        </div>
       </section>
 
-      <section class="intro-strip">
+      <section class="intro-strip" aria-label="Avantages PC-CARDS">
         <div>
           <strong>PC verifies</strong>
           <span>Configurations equilibrees et composants selectionnes.</span>
         </div>
         <div>
           <strong>Series courtes</strong>
-          <span>Des editions limitees avec un style plus rare.</span>
+          <span>Des editions limitees avec un style sobre.</span>
         </div>
         <div>
           <strong>Gaming ready</strong>
@@ -79,122 +94,3 @@
       </section>
 
       <section class="catalogue-section" id="catalogue">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Catalogue</p>
-            <h2 id="selection">PC</h2>
-          </div>
-          <p id="activeFilter">Tout voir</p>
-        </div>
-
-        <div class="filter-bar">
-          <button class="filter-button active" type="button" data-filter="all">Tout voir</button>
-          <button class="filter-button" type="button" data-filter="limited">Limited Edition</button>
-          <button class="filter-button" type="button" data-filter="gamer">PC GAMER</button>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-card" data-category="gamer">
-            <span class="product-tag">PC GAMER</span>
-            <h3>Neon RTX Station</h3>
-            <p>RTX 4070 Super, Ryzen 7, 32 Go RAM, SSD 1 To.</p>
-            <div class="product-meta">
-              <span>1440p</span>
-              <span>Wi-Fi 6E</span>
-              <span>RGB</span>
-            </div>
-            <div class="product-footer">
-              <strong>1 699 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-
-          <article class="product-card limited" data-category="limited">
-            <span class="product-tag">Limited Edition</span>
-            <h3>Carbon Black LE</h3>
-            <p>Boitier numerote, RTX 4080 Super, Intel i7, SSD 2 To.</p>
-            <div class="product-meta">
-              <span>Serie 25</span>
-              <span>Watercooling</span>
-              <span>Silencieux</span>
-            </div>
-            <div class="product-footer">
-              <strong>2 499 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="gamer">
-            <span class="product-tag">PC GAMER</span>
-            <h3>Arena Core</h3>
-            <p>RTX 4060 Ti, Intel i5, 16 Go RAM, SSD 1 To.</p>
-            <div class="product-meta">
-              <span>1080p+</span>
-              <span>Compact</span>
-              <span>Upgrade</span>
-            </div>
-            <div class="product-footer">
-              <strong>1 149 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-
-          <article class="product-card limited" data-category="limited">
-            <span class="product-tag">Limited Edition</span>
-            <h3>White Storm LE</h3>
-            <p>Setup blanc, RTX 4070 Ti Super, Ryzen 9, SSD 2 To.</p>
-            <div class="product-meta">
-              <span>4K ready</span>
-              <span>Serie 15</span>
-              <span>Creator</span>
-            </div>
-            <div class="product-footer">
-              <strong>2 199 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="gamer">
-            <span class="product-tag">PC GAMER</span>
-            <h3>Stream Deck PC</h3>
-            <p>RTX 4070, Ryzen 7, 32 Go RAM, capture et streaming.</p>
-            <div class="product-meta">
-              <span>Streaming</span>
-              <span>OBS ready</span>
-              <span>2 To</span>
-            </div>
-            <div class="product-footer">
-              <strong>1 849 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="gamer">
-            <span class="product-tag">PC GAMER</span>
-            <h3>Starter Pulse</h3>
-            <p>RTX 4060, Ryzen 5, 16 Go RAM, SSD 1 To.</p>
-            <div class="product-meta">
-              <span>Esport</span>
-              <span>144 Hz</span>
-              <span>Budget</span>
-            </div>
-            <div class="product-footer">
-              <strong>899 EUR</strong>
-              <button type="button" class="add-button">Ajouter</button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Une configuration precise ?</h2>
-        </div>
-        <a href="mailto:contact@pc-cards.example">contact@pc-cards.example</a>
-      </section>
-    </main>
-
-    <script src="./script.js?v=2"></script>
-  </body>
-</html>
