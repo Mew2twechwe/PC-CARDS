@@ -1,14 +1,99 @@
-<h2 id="selection">PC</h2>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC-CARDS | Boutique PC</title>
+    <meta name="description" content="Boutique PC-CARDS pour PC Gamer et Limited Edition." />
+    <link rel="stylesheet" href="./styles.css?v=2" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#accueil">
+        <span class="brand-mark">PC</span>
+        <span>PC-CARDS</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#accueil">Accueil</a>
+
+        <div class="catalogue-menu">
+          <button class="nav-button" id="catalogueToggle" type="button">
+            Catalogue
+          </button>
+
+          <div class="catalogue-panel" id="cataloguePanel">
+            <button class="pc-toggle" id="pcToggle" type="button">
+              PC
+            </button>
+
+            <div class="pc-options" id="pcOptions">
+              <button type="button" data-filter="all">Tout voir</button>
+              <button type="button" data-filter="limited">Limited Edition</button>
+              <button type="button" data-filter="gamer">PC GAMER</button>
+            </div>
+          </div>
+        </div>
+
+        <a href="#selection">Selection</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="cart-button" type="button">
+        Panier <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main id="accueil">
+      <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="./assets/banner.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Boutique PC</p>
+          <h1>PC-CARDS</h1>
+          <p class="hero-copy">
+            Des configurations PC pretes pour jouer, creer et passer au niveau superieur.
+          </p>
+          <a class="hero-link" href="#catalogue">Voir le catalogue</a>
+        </div>
+      </section>
+
+      <section class="intro-strip">
+        <div>
+          <strong>PC verifies</strong>
+          <span>Configurations equilibrees et composants selectionnes.</span>
+        </div>
+        <div>
+          <strong>Series courtes</strong>
+          <span>Des editions limitees avec un style plus rare.</span>
+        </div>
+        <div>
+          <strong>Gaming ready</strong>
+          <span>Des machines pensees pour le jeu et le streaming.</span>
+        </div>
+      </section>
+
+      <section class="catalogue-section" id="catalogue">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalogue</p>
+            <h2 id="selection">PC</h2>
+          </div>
           <p id="activeFilter">Tout voir</p>
         </div>
 
-        <div class="filter-bar" aria-label="Filtres catalogue">
+        <div class="filter-bar">
           <button class="filter-button active" type="button" data-filter="all">Tout voir</button>
           <button class="filter-button" type="button" data-filter="limited">Limited Edition</button>
           <button class="filter-button" type="button" data-filter="gamer">PC GAMER</button>
         </div>
 
-        <div class="product-grid" aria-live="polite">
+        <div class="product-grid">
           <article class="product-card" data-category="gamer">
             <span class="product-tag">PC GAMER</span>
             <h3>Neon RTX Station</h3>
@@ -110,6 +195,6 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="./script.js?v=2"></script>
   </body>
 </html>
