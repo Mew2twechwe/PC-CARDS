@@ -7,6 +7,7 @@ const productCards = document.querySelectorAll(".product-card");
 const activeFilterLabel = document.querySelector("#activeFilter");
 const cartCount = document.querySelector("#cartCount");
 const addButtons = document.querySelectorAll(".add-button");
+const logoVideo = document.querySelector("#logoVideo");
 
 const labels = {
   all: "Tout voir",
@@ -40,6 +41,26 @@ function applyFilter(filter) {
   setMenuState(false);
   setPcState(false);
   document.querySelector("#catalogue").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function enableShortLogoLoop(video) {
+  if (!video) {
+    return;
+  }
+
+  const loopEnd = Number(video.dataset.loopEnd || 6);
+
+  video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= loopEnd) {
+      video.currentTime = 0;
+      video.play();
+    }
+  });
+
+  video.addEventListener("ended", () => {
+    video.currentTime = 0;
+    video.play();
+  });
 }
 
 catalogueToggle.addEventListener("click", () => {
@@ -87,3 +108,5 @@ document.addEventListener("keydown", (event) => {
     catalogueToggle.focus();
   }
 });
+
+enableShortLogoLoop(logoVideo);
